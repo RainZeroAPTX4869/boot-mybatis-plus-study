@@ -15,6 +15,9 @@ spring:
         wall:
           config:
             delete-allow: false
+        stat:
+          merge-sql: false
+#          slow-sql-millis: 1000
   jackson:
     #日期格式化
     date-format: yyyy-MM-dd HH:mm:ss

@@ -18,7 +18,7 @@ import java.io.Serializable;
 public class AppUser implements Serializable {
     private static final long serialVersionUID = -62031929121266132L;
 
-    private Object id;
+    private Integer id;
     /**
      * 用户昵称
      */
@@ -34,7 +34,7 @@ public class AppUser implements Serializable {
     /**
      * 性别（0:男；1：女）
      */
-    private Object gender;
+    private Integer gender;
     /**
      * 密码
      */
@@ -42,7 +42,7 @@ public class AppUser implements Serializable {
     /**
      * 年龄
      */
-    private Object age;
+    private Integer age;
 
     @TableField(fill = FieldFill.INSERT)
     private Date createTime;
