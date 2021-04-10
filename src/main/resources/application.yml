@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.232.200:3306/school?useSSL=false&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://192.168.0.200:3306/school?useSSL=false&useUnicode=true&characterEncoding=utf8
     username: root
     password: root
     druid:
@@ -17,7 +17,7 @@ spring:
             delete-allow: false
         stat:
           merge-sql: false
-#          slow-sql-millis: 1000
+#          slow-sql-millis: 1000\
   jackson:
     #日期格式化
     date-format: yyyy-MM-dd HH:mm:ss
@@ -36,6 +36,23 @@ spring:
       allow_unquoted_control_chars: true
       #允许出现单引号
       allow_single_quotes: true
+  redis:
+    host: "192.168.0.200"
+    port: 6379
+    #username: root
+    password: root
+    jedis:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池中的最小空闲连接
+        min-idle: 0
+    # 连接超时时间（毫秒）
+    timeout: 0
 mybatis-plus:
   mapper-locations: classpath:mapper\*.xml
   configuration:
